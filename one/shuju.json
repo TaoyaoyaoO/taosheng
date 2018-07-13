@@ -1,0 +1,65 @@
+[
+ {
+	"id":1,
+	"name":"小米电视4 55英寸",
+	"titie":"超薄高端旗舰店电视",
+	"images":"images/1.png",
+	"price":"¥3699.00",
+	"old":"¥4499.00"
+ },
+ {
+	"id":2,
+	"name":"小米电视4A 49英寸",
+	"titie":"大存储 /全高清",
+	"images":"images/2.png",
+	"price":"¥2049.00",
+	"old":"¥2399.00"
+ },
+ {
+	"id":3,
+	"name":"小米笔记本pto 15.6英寸",
+	"titie":"全金属强化机身",
+	"images":"images/3.png",
+	"price":"¥5399.00",
+	"old":"¥5599.00"
+ },
+ {
+	"id":4,
+	"name":"小米笔记本 i7处理器",
+	"titie":"酷睿i7处理器",
+	"images":"images/4.png",
+	"price":"¥5599.00",
+	"old":"¥5999.00"
+ },
+  {
+	"id":5,
+	"name":"米压力电饭煲",
+	"titie":"智能烹煮",
+	"images":"images/5.png",
+	"price":"¥899.00",
+	"old":"¥999.00"
+ },
+ {
+	"id":6,
+	"name":"激光投影仪",
+	"titie":"超大尺寸",
+	"images":"images/6.png",
+	"price":"¥9499.00",
+	"old":"¥9999.00"
+ },
+ {
+	"id":7,
+	"name":"小米空气净化器",
+	"titie":"空气焕然一新",
+	"images":"images/7.png",
+	"price":"¥599.00",
+	"old":"¥699.00"
+ },
+ {
+	"id":8,
+	"name":"小白摄像机",
+	"titie":"",
+	"images":"images/8.png",
+	"price":"¥349.00",
+	"old":""
+ }]

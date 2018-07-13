@@ -1,0 +1,19 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img{margin:0;padding:0;}
+body;html{font:12px "微软雅黑""Arial Narrow",HELVETICA; color:#999;} 
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;font-size:100%;}
+img,fieldset{ border:0;}
+em,i{font-style:normal;}
+a{text-decoration:none;color:#999; }
+ul,li{list-style:none;}
+table{border-collapse:collapse;border-spacing:0;}
+input,button{outline: 0;border:none;}
+#main{width:1000px;height:626px;background-color: #f6f5f4;}
+#main .ul{overflow: hidden;}
+#main .ul li{width:234px;height:300px;margin: 6px;float: left;background: #fff url(../one/images/10.png) center top  no-repeat;}
+#main .ul li:nth-child(3){background: #fff url(../one/images/11.png) center top  no-repeat;}
+#main .ul li:nth-child(4){background: #fff}
+#main .ul li:nth-child(8){background:#f6f5f4;}
+#main .ul li a{width:234px;height:300px;overflow: hidden;display: table-cell;
+        vertical-align: middle;}
+
+

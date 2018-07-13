@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding:0;}
+			table tr td{width:50px;height:20px;padding:0;}
+			#meng{width:100%;height:100%;background-color:rgba(0,0,0,.4);display: none;position: absolute;}
+		#box{width:400px;height:300px;display:none;position: absolute;background-color:pink;text-align: center;font-size:28px;left: 50%;margin-left:-200px;top:50%;margin-top: -150px;}
+		#mov{display:block;height:30px;width:100%;background: #000000;}
+		#box p{width:100%;margin:180px auto 0;}
+		#shan{display: block;width:40px;height:30px;font-size:12px;text-align: center;line-height:30px;color: #fff;border:1px solid #fff;float: left;margin-left: 150px;}
+		#que{display: block;width:40px;height:30px;font-size:12px;text-align: center;line-height:30px;color: #fff;border:1px solid #fff;float: left;margin-left: 100px;}
+		</style>
+	</head>
+	<body>
+		第一个删除有一丢丢效果
+		<div id="meng"></div>
+		<div id="box">
+           <span id="mov"></span>
+           <strong class="nnn">确认删除此行？</strong>
+           <p><span id="que">确定</span>
+           <span id="shan">关闭</span></p>
+		</div>
+		<table border="1">
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td><a id="aaa">删除</a></td>
+            </tr>
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td><a>删除</a></td>
+            </tr>
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td><a>删除</a></td>
+            </tr>
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td><a>删除</a></td>
+            </tr>
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td><a>删除</a></td>
+            </tr>
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td><a>删除</a></td>
+            </tr>
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td><a>删除</a></td>
+            </tr>
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td><a>删除</a></td>
+            </tr>
+            <tr>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td></td>
+            	<td><a  id="aaa">删除</a></td>
+            </tr>
+		</table>
+	</body>
+</html>
+<script>
+	 var aa = document.getElementById("aaa");
+ 	var bb = document.getElementById("box");
+ 	var movv =document.getElementById("mov");
+ 	var san =document.getElementById("shan");
+ 	var que =document.getElementById("que");
+ 	var me = document.getElementById("meng");
+ 	aa.onclick=function(){
+ 		me.style.display = "block";
+ 		bb.style.display ="block";
+ 	} 
+
+ san.onclick=function(){
+ 	
+ 		me.style.display = "none";
+ 		bb.style.display ="none";
+ 		
+ }
+ mov.onmousedown = function(e){
+ 	var e = e || window.event;
+ 	var x = 200;
+ 	var y = 150;
+	var leftt = e.offsetX -x;
+	var topp = e.offsetY -y;
+ 
+ document.onmousemove = function(){
+ 	var e = e || window.event;
+ 	var l = e.clientX - leftt;
+ 	var t = e.clientY - topp;
+ 	 bb.style.left = l +"px";
+ 	 bb.style.top = t  +"px";
+ }
+  document.onmouseup = function(){
+		    	document.onmousemove = null;
+		    	document.onmouseup = null;
+		  }
+ }
+  que.onclick = function(e){
+		var e = e ||window.event ;
+		var target = e.target ||e.srcElement;
+		if(target .tagName == "A"){
+			target.parentNode.parentNode.remove();
+		}
+		}
+  //不会写了
+//	  var inp = document.getElementById('inp');
+//      var pass = document.getElementById('pass');
+//      var btn = document.getElementById('btn');
+//      btn.onclick = function() {
+//          var _id = id.text;
+//          var _name = name.text;
+ //           var _title = title.text;
+   //          var _price = price.text;
+     //         var _old = old.text;
+//          var params = {
+//              method: 'POST',
+//              url: 'shuju.json',
+//              data: {
+//                  _id:id;
+//           _name:name;
+ //            _title:title;
+   //           _price:price;
+     //          _old:old;
+//              },
+//          }
+//          ajax(params);
+//异步执行
+	   function ajax(params) {
+        var _default = {
+            method: 'GET',
+            url: null,
+            data: null,
+            timeout: 1000,
+            dataType: 'json'
+        }
+        for(var i in params) {
+            _default[i] = params[i];
+        }
+        var xhr = getXHR();
+        for(var item in  _default.data) {
+            if(_default.url.indexOf('?') == -1) {
+                _default.url += '?' + Date.now();
+            } else {
+                _default.url += '&' + Date.now();
+            }
+        }
+        xhr.open(_default.method, _default.url,true);
+        if (_default.dataType == 'json') {
+            _default.data = JSON.stringify(_default.data);
+        }
+        _default.data = _default.method == 'GET' ? null : _default.data;
+        xhr.send(_default.data);
+        return new Promise(function(resolved, reject){
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState === 4 && xhr.status === 200) {
+                    var json = xhr.responseText;
+                    json = _default.dataType == 'json' ? JSON.parse(json) : json;
+                    resolved(json);
+                }
+            }
+        })
+    }
+</script>
